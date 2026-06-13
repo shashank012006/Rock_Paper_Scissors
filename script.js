@@ -1,5 +1,7 @@
 console.log("Hello player ! ");
 
+
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -10,13 +12,19 @@ function getCC(){
 }
 
 function getHC(){
-    userInput = prompt("Enter rock,paper and scissors");
-    playc = userInput ? userInput.trim().toLowerCase() : "";
-    return playc
+    // userInput = prompt("Enter rock,paper and scissors");
+    // playc = userInput ? userInput.trim().toLowerCase() : "";
+    // return playc
+    const rockButton = document.getElementById("myButton");
+    
+    rockButton.addEventListener("click", () => {
+        const choice = "rock";
+        return choice
+    });
 }
 
 function play(humanc,computerc){
-
+    
     if (humanc === computerc){
         console.log("it is tie");
     }
@@ -47,11 +55,11 @@ function play(humanc,computerc){
     else{
         console.log("Invalid");
     }
-
+    
     
 }
 
-for (i=0;i<=4;i++){
+for (i=0;i<=0;i++){
     const humanc = getHC();
     const computerc = getCC();
     play(humanc,computerc);
