@@ -9,14 +9,18 @@
 <body>
     <div class="sec">
         <div class="inner-button">
-            <button id="rockBtn">Rock</button>
-            <button id="paperBtn">Paper</button>
-            <button id="scissorsBtn">Scissors</button>            
+            <button id="rockBtn" style="font-size: 100px;">✊</button>
+            <button id="paperBtn" style="font-size: 100px;">✋</button>
+            <button id="scissorsBtn" style="font-size: 100px;">✌️</button>            
         </div>
-        <div class="score">
-            <p><span id="winnerRec"></span> </p>
-            <p>Human score =  <span id = "human-score">0</span></p>
-            <p>computer-score = 0</p>
+        <div class="score" style="color: white;">
+            <p><span id="winnerRec">This game consists of 5 rounds. The player with the highest score after 5 rounds wins.</span> </p>
+            <p>Player Score : <span id = "human-score">0</span></p>
+            <p>Computer Score : <span id="computer-score">0</span></p>
+            <p><span id = "iswinner" style="font-size: 2.5rem; text-transform: uppercase;"></span></p>
+            <p><span id = "rest"></span></p>
+
+            <button id="resetBtn">Reset Game</button>
         </div>
     </div>
     <script src="./script.js"></script>

@@ -13,6 +13,27 @@ function getCC(){
     return items[randomc]
 }
 
+function final(hs,cs){
+    if (hs === cs){
+        document.getElementById("iswinner").textContent = "It is a tie";
+        document.getElementById("rest").textContent = "Click 'Reset Game' to play again.";
+        document.getElementById("iswinner").style.color = "yellow";
+        resetButton.style.display = "block";
+        
+    }
+    else if (hs > cs){
+        document.getElementById("iswinner").textContent = "Player congrats you have won";
+        document.getElementById("rest").textContent = "Click 'Reset Game' to play again.";
+        document.getElementById("iswinner").style.color = "Green";
+        resetButton.style.display = "block";
+    }
+    else if (cs > hs){
+        document.getElementById("iswinner").textContent = "you have lost ! ";
+        document.getElementById("rest").textContent = "Click 'Reset Game' to play again.";
+        document.getElementById("iswinner").style.color = "red";
+        resetButton.style.display = "block";
+    }
+}
 
 let minRound = 0;
 const maxRound = 5;
@@ -73,18 +94,46 @@ function play(humanc,computerc){
     }
 
     document.getElementById("human-score").textContent = humanScore;
+    document.getElementById("computer-score").textContent = computerScore;
+
+    if (minRound === 5){
+        final(humanScore,computerScore)
+    }
 }
     
-const computerc = getCC();
 rockButton.addEventListener("click", () => {
-    play("rock",computerc);
+    play("rock",getCC());
 });
     
 paperButton.addEventListener("click", () => {
-    play("paper",computerc);
+    play("paper",getCC());
 });
     
 scissorsButton.addEventListener("click", () => {
-    play("scissors",computerc);
+    play("scissors",getCC());
 });
 
+const resetButton = document.getElementById("resetBtn");
+
+function resetGame() {
+    humanScore = 0;
+    computerScore = 0;
+    minRound = 0;
+
+    document.getElementById("human-score").textContent = 0;
+    document.getElementById("computer-score").textContent = 0;
+
+    document.getElementById("winnerRec").textContent =
+        "This game consists of 5 rounds. The player with the highest score after 5 rounds wins.";
+
+    document.getElementById("iswinner").textContent = "";
+    document.getElementById("rest").textContent = "";
+
+    rockButton.disabled = false;
+    paperButton.disabled = false;
+    scissorsButton.disabled = false;
+
+    resetButton.style.display = "none";
+}
+
+resetButton.addEventListener("click", resetGame);
