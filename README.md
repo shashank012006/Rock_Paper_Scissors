@@ -2,6 +2,12 @@
 
 A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript.
 
+## Live Demo
+
+Play the game here:
+
+https://shashank012006.github.io/Rock_Paper_Scissors/
+
 ## Features
 
 * Play Rock, Paper, Scissors against the computer
@@ -13,64 +19,35 @@ A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript.
 
 ## How to Play
 
-1. Click one of the three buttons:
-
-   * ✊ Rock
-   * ✋ Paper
-   * ✌️ Scissors
-2. The computer randomly selects its move.
+1. Choose Rock, Paper, or Scissors.
+2. The computer makes a random choice.
 3. The winner of each round is displayed.
-4. After 5 rounds, the final winner is announced.
+4. After 5 rounds, the player with the highest score wins.
 5. Click **Reset Game** to start a new match.
-
-## Winning Rules
-
-* Rock beats Scissors
-* Scissors beats Paper
-* Paper beats Rock
-* Same choices result in a tie
 
 ## Technologies Used
 
 * HTML5
 * CSS3
-* JavaScript (Vanilla JS)
+* JavaScript
 
 ## Project Structure
 
-```text
 rock-paper-scissors/
-│
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-```
 
 ## Installation
 
-Clone the repository:
-
 ```bash
-git clone <repository-url>
-```
-
-Navigate to the project folder:
-
-```bash
-cd rock-paper-scissors
+git clone https://github.com/shashank012006/Rock_Paper_Scissors.git
+cd Rock_Paper_Scissors
 ```
 
 Open `index.html` in your browser.
 
-## Future Improvements
-
-* Add round counter
-* Display player's and computer's choices
-* Add animations and sound effects
-* Improve mobile responsiveness
-* Store high scores using localStorage
-
 ## Author
 
-Created as a JavaScript learning project.
+Shashank V
