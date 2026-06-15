@@ -20,6 +20,10 @@ const maxRound = 5;
 function play(humanc,computerc){
     
 
+
+    let humeanw = "player won";
+    let computerw = "computer won";
+    
     if (minRound>=maxRound){
         console.log("U have finished game ! ");
         rockButton.disabled = true;
@@ -27,46 +31,48 @@ function play(humanc,computerc){
         scissorsButton.disabled = true;
         return;
     }
-
+    
     minRound++
     
     if (humanc === computerc){
-        console.log("it is tie");
+        let tie = "It is a tie";
+        document.getElementById("winnerRec").textContent = tie;
     }
     else if (humanc === "paper" && computerc === "rock"){
-        console.log("player won");
-        humanScore += 1;
-    
+        document.getElementById("winnerRec").textContent = humeanw;
+        humanScore ++;        
     }
     else if (humanc === "rock" && computerc === "paper"){
-        console.log("computer won");
-        computerScore += 1;
-    
+        document.getElementById("winnerRec").textContent = computerw;
+        computerScore ++;
+        
     }
     else if (humanc === "rock" && computerc === "scissors"){
-        console.log("player won");
-        humanScore += 1;
-    
+        document.getElementById("winnerRec").textContent = humeanw;
+        humanScore ++;
+        
     }
     else if (humanc === "scissors" && computerc === "rock"){
-        console.log("computer won");
-        computerScore += 1;
-    
+        document.getElementById("winnerRec").textContent = computerw;
+        computerScore ++;
+        
     }
     else if (humanc === "scissors" && computerc === "paper"){
-        console.log("player won");
-        humanScore += 1;
-    
+        document.getElementById("winnerRec").textContent = humeanw;
+        humanScore ++;
+        
     }
     else if (humanc === "paper" && computerc === "scissors"){
-        console.log("computer won");
-        computerScore += 1;
-    
+        document.getElementById("winnerRec").textContent = computerw;
+        computerScore ++;
+        
     }
     else{
         console.log("Invalid");
-    
+        
     }
+
+    document.getElementById("human-score").textContent = humanScore;
 }
     
 const computerc = getCC();
@@ -81,5 +87,4 @@ paperButton.addEventListener("click", () => {
 scissorsButton.addEventListener("click", () => {
     play("scissors",computerc);
 });
-
 

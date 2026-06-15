@@ -41,3 +41,7 @@ button{
 button:hover{
     background-color: rgb(232, 246, 158);
 }
+
+.score{
+    justify-items: center;
+}
